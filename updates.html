@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="icon" href="https://imgur.com/hltcvDc.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/sidebar.css" />
+  <link rel="stylesheet" href="../css/updates.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+
+
+
+  <!-- Burger visible uniquement sur mobile -->
+  <button class="burger" aria-label="Menu"><i class="fas fa-bars"></i></button>
+
+  <!-- Sidebar -->
+<div class="sidebar">
+  <div class="top-section">
+    <div class="logo-wrapper">
+     <a class="logo-text-content" href="./index.html">
+      <img src="../assets/logo.png" alt="Nexus Logo" class="logo-img" />
+      <div class="logo-text">Nexus RP</div>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Section scrollable -->
+  <div class="sidebar-scroll">
+
+    <!-- Section Support -->
+    <div class="support-section">
+      <div class="category-title" tabindex="0" role="button" data-name="support" aria-expanded="true" onclick="toggleCategory(this)">
+        Support
+        <span class="toggle-arrow">
+          <svg viewBox="0 0 24 24" width="16" height="16" class="arrow-icon">
+            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </div>
+     <ul class="channel-list">
+        <li><a href="./updates.html" class="channel-item"><i class="fas fa-code-branch"></i> Mises à jour</a></li>
+        <li><a href="https://discord.gg/h9WRBPjKKH" target="_blank" class="channel-item"><i class="fas fa-headset"></i> Serveur Support</a></li>
+      </ul>
+    </div>
+
+    <!-- Section Informations -->
+    <div class="information-section">
+      <div class="category-title" tabindex="0" role="button" data-name="informations" aria-expanded="true" onclick="toggleCategory(this)">
+        Informations
+        <span class="toggle-arrow">
+          <svg viewBox="0 0 24 24" width="16" height="16" class="arrow-icon">
+            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </div>
+       <ul class="channel-list">
+        <li><a href="./tarifs.html" class="channel-item"><i class="fas fa-file-invoice-dollar"></i> Tarifs</a></li>
+        <li><a href="./conditions.html" class="channel-item"><i class="fas fa-file-contract"></i> Conditions d'utilisations</a></li>
+        <li><a href="./politique.html" class="channel-item"><i class="fas fa-balance-scale"></i> Politique de confidentialité</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+<!-- Contenu principal -->
+<main class="content sidebar-scroll">
+  <section class="updates-section">
+    <h1 class="updates-title">Historique des mises à jour</h1>
+
+    <div class="updates-grid">
+
+      <!-- Update 1.0 -->
+      <div class="update-card">
+        <div class="version-header">
+          <div class="version-circle">V2.SITE</div>
+          <div>
+            <h2>Refonte intégrale du site</h2>
+            <p class="date-added">Ajouté le 31 juillet 2025 - Publié récemment</p>
+          </div>
+        </div>
+        <ul class="update-list">
+          <li><i class="fas fa-puzzle-piece"></i> Tout le site a été complètement refait afin d'obtenir un style plus moderne.</li>
+        </ul>
+      </div>
+
+
+
+  
+
+    </div>
+  </section>
+
+  <!-- Fab - Téléchargement
+  <a href="/downloads/Nexus-RP-Setup-1.0.0.exe" title="Installer l'application" class="install-fab" download>
+    <i class="fas fa-download"></i>
+  </a> -->
+</main>
+
+
+
+  <div id="logoutModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h2>Confirmer la déconnexion</h2>
+      <p>Es-tu sûr de vouloir te déconnecter ?</p>
+        <div style="margin-top: 20px;">
+          <button id="confirmLogout" class="btn btn-danger">Oui, me déconnecter</button>
+          <button id="cancelLogout" class="btn btn-cancel">Annuler</button>
+        </div>
+    </div>
+  </div>
+
+
+  <script src="../js/scripts.js"></script>
+</body>
+</html>
